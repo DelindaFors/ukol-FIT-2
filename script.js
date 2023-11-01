@@ -1,5 +1,9 @@
-const jmeno = prompt ("Zadej své jméno: ")
-const prijmeni = prompt ("Zadej své příjmení: ")
+const jmeno = prompt ("Zadej své jméno (bez diakritiky): ");
+const prijmeni = prompt ("Zadej své příjmení (bez diakritiky): ");
 
-document.body.innerHTML = jmeno
-document.body.innerHTML = prijmeni
+prijmeni . trim ();
+jmeno . trim ();
+
+document.body.innerHTML += prijmeni . slice (0,4) . toLowerCase () + jmeno . slice (0,2) . toLowerCase () + "@" + "fit.cvut.cz"
+
+
